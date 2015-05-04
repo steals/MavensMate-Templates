@@ -5,6 +5,11 @@
  **/
 public class {{ api_name }} extends SObjectSelector
 {
+	public static I{{ api_name }} newInstance()
+	{
+		return (I{{ api_name }}) Application.Selector.newInstance({{ object_name }}.SObjectType);
+	}
+
 	public List<Schema.SObjectField> getSObjectFieldList()
 	{
 		return new List<Schema.SObjectField> {
