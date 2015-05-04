@@ -4,6 +4,7 @@
  * https://developer.salesforce.com/page/Apex_Enterprise_Patterns_-_Selector_Layer
  **/
 public class {{ api_name }} extends SObjectSelector
+	implements I{{ api_name }}
 {
 	public static I{{ api_name }} newInstance()
 	{
