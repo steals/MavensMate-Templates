@@ -1,9 +1,3 @@
-/**
- * See https://github.com/financialforcedev/fflib-apex-common for more info
- *
- * Install library via 
- *   https://githubsfdeploy.herokuapp.com/app/githubdeploy/financialforcedev/fflib-apex-common
- */
 
 /**
  * Boiler plate Apex Trigger to route events to the respective Domain class methods
@@ -15,5 +9,5 @@ trigger {{ api_name }} on {{ object_name }} (after delete, after insert, after u
   before delete, before insert, before update) 
 {
    // Creates Domain class instance and calls appropriate methods
-   fflib_SObjectDomain.triggerHandler({{ api_name }}.class);
+   SObjectDomain.triggerHandler({{ api_name }}.class);
 }
